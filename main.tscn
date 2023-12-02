@@ -42,7 +42,7 @@ grow_vertical = 2
 texture = ExtResource("2_t2kee")
 
 [node name="CharacterBody2D" parent="." instance=ExtResource("4_t3csr")]
-position = Vector2(-297, 1)
+position = Vector2(-297, 4)
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 
