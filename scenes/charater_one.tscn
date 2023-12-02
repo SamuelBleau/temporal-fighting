@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://c8pf16wkm7ni8"]
+
+[ext_resource type="Texture2D" uid="uid://cqgsqcp86sb1g" path="res://assets/walk.png" id="1_o5yet"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8kh2f"]
+size = Vector2(916.562, 51)
+
+[node name="CharacterBody2D" type="CharacterBody2D"]
+texture_filter = 1
+position = Vector2(413, 58)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_o5yet")
+offset = Vector2(96, 0)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(92, 5)
+shape = SubResource("RectangleShape2D_8kh2f")

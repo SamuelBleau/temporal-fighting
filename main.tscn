@@ -1,3 +1,18 @@
-[gd_scene format=3 uid="uid://b4o61ww2px5xg"]
+[gd_scene load_steps=3 format=3 uid="uid://b4o61ww2px5xg"]
+
+[ext_resource type="Texture2D" uid="uid://b3hh23bx4fme" path="res://assets/background.png" id="1_8ehbf"]
+[ext_resource type="PackedScene" uid="uid://c8pf16wkm7ni8" path="res://scenes/charater_one.tscn" id="2_oqsx5"]
 
 [node name="Node" type="Node"]
+
+[node name="TextureRect" type="TextureRect" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_8ehbf")
+stretch_mode = 1
+
+[node name="CharacterBody2D" parent="." instance=ExtResource("2_oqsx5")]
+position = Vector2(475, 51)
