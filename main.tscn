@@ -1,18 +1,65 @@
-[gd_scene load_steps=3 format=3 uid="uid://b4o61ww2px5xg"]
+[gd_scene load_steps=7 format=3 uid="uid://b4o61ww2px5xg"]
 
-[ext_resource type="Texture2D" uid="uid://b3hh23bx4fme" path="res://assets/background.png" id="1_8ehbf"]
-[ext_resource type="PackedScene" uid="uid://c8pf16wkm7ni8" path="res://scenes/charater_one.tscn" id="2_oqsx5"]
+[ext_resource type="Texture2D" uid="uid://cehqmnm2wke8u" path="res://assets/back-buildings.png" id="1_0snn7"]
+[ext_resource type="Texture2D" uid="uid://xv4dv44qf02p" path="res://assets/far-buildings.png" id="1_0vggn"]
+[ext_resource type="Texture2D" uid="uid://nulxnyy5pit5" path="res://assets/foreground.png" id="2_t2kee"]
+[ext_resource type="PackedScene" uid="uid://d4l7wwxq5i0m6" path="res://scenes/first_character.tscn" id="4_t3csr"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_khd8i"]
+size = Vector2(1152, 26)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1w64d"]
+size = Vector2(42.5, 608)
 
 [node name="Node" type="Node"]
 
-[node name="TextureRect" type="TextureRect" parent="."]
+[node name="TextureRect3" type="TextureRect" parent="."]
+texture_filter = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("1_8ehbf")
-stretch_mode = 1
+texture = ExtResource("1_0vggn")
 
-[node name="CharacterBody2D" parent="." instance=ExtResource("2_oqsx5")]
-position = Vector2(475, 51)
+[node name="TextureRect2" type="TextureRect" parent="."]
+texture_filter = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_0snn7")
+stretch_mode = 4
+
+[node name="TextureRect" type="TextureRect" parent="."]
+texture_filter = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_t2kee")
+
+[node name="CharacterBody2D" parent="." instance=ExtResource("4_t3csr")]
+position = Vector2(-297, 1)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(576, 635)
+shape = SubResource("RectangleShape2D_khd8i")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(-21, 304)
+shape = SubResource("RectangleShape2D_1w64d")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(1173, 304)
+shape = SubResource("RectangleShape2D_1w64d")
+
+[node name="Panel" type="Panel" parent="StaticBody2D"]
+visible = false
+offset_top = 622.0
+offset_right = 1153.0
+offset_bottom = 647.0
