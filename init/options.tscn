@@ -1,9 +1,10 @@
-[gd_scene load_steps=6 format=3 uid="uid://no5jsnb5brh8"]
+[gd_scene load_steps=7 format=3 uid="uid://no5jsnb5brh8"]
 
 [ext_resource type="Texture2D" uid="uid://hddulpkhieub" path="res://assets/menu_background.jpg" id="1_pooll"]
 [ext_resource type="Script" path="res://init/options.gd" id="1_wit1o"]
 [ext_resource type="FontFile" uid="uid://los6j0hwmf2b" path="res://assets/ARCADE.TTF" id="2_omil6"]
 [ext_resource type="AudioStream" uid="uid://o2fsgocjjyih" path="res://assets/option_music.wav" id="3_5vk85"]
+[ext_resource type="Script" path="res://init/MusicSlider.gd" id="5_r4jc4"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_n7jlk"]
 
@@ -37,6 +38,7 @@ vertical_alignment = 1
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("3_5vk85")
 autoplay = true
+bus = &"music"
 
 [node name="Button" type="Button" parent="."]
 layout_mode = 0
@@ -56,4 +58,64 @@ theme_override_styles/focus = SubResource("StyleBoxEmpty_n7jlk")
 text = "Back to menu"
 flat = true
 
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+layout_mode = 0
+offset_left = 364.0
+offset_top = 254.0
+offset_right = 864.0
+offset_bottom = 304.0
+
+[node name="Label" type="Label" parent="HBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_omil6")
+theme_override_font_sizes/font_size = 50
+text = "Resolution
+"
+
+[node name="OptionButton" type="OptionButton" parent="HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="MusicText" type="Label" parent="."]
+layout_mode = 2
+offset_left = 364.0
+offset_top = 340.0
+offset_right = 477.0
+offset_bottom = 390.0
+theme_override_fonts/font = ExtResource("2_omil6")
+theme_override_font_sizes/font_size = 50
+text = "Music"
+
+[node name="MusicSlider" type="HSlider" parent="."]
+layout_mode = 2
+offset_left = 500.0
+offset_top = 352.0
+offset_right = 850.0
+offset_bottom = 368.0
+max_value = 1.0
+step = 0.001
+script = ExtResource("5_r4jc4")
+bus_name = "music"
+
+[node name="SfxText" type="Label" parent="."]
+layout_mode = 0
+offset_left = 364.0
+offset_top = 410.0
+offset_right = 442.0
+offset_bottom = 460.0
+theme_override_fonts/font = ExtResource("2_omil6")
+theme_override_font_sizes/font_size = 50
+text = "SFX"
+
+[node name="SfxSlider" type="HSlider" parent="."]
+offset_left = 500.0
+offset_top = 422.0
+offset_right = 850.0
+offset_bottom = 438.0
+max_value = 1.0
+step = 0.001
+script = ExtResource("5_r4jc4")
+bus_name = "sfx"
+
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+[connection signal="item_selected" from="HBoxContainer/OptionButton" to="." method="_on_option_button_item_selected"]
