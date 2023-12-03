@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://dexdnpqfh5sc2"]
+
+[ext_resource type="Texture2D" uid="uid://dmy3hj125hdq2" path="res://BabyWhiteDragonIdleSide.png" id="1_m3jbm"]
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_qsxae"]
+b = Vector2(30, 0)
+
+[node name="RigidBody2D" type="RigidBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(74, -6)
+scale = Vector2(3, 3)
+texture = ExtResource("1_m3jbm")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+texture_filter = 1
+position = Vector2(-15, 17)
+shape = SubResource("SegmentShape2D_qsxae")
