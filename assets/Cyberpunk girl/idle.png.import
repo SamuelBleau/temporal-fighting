@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ci4qt4al6epdd"
-path="res://.godot/imported/jab.png-1bd7d52f26142f66afca460a0f7aed8a.ctex"
+uid="uid://c4yfky25si0om"
+path="res://.godot/imported/idle.png-6795bb7efa65cff1f6647b19c7a21f53.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/jab.png"
-dest_files=["res://.godot/imported/jab.png-1bd7d52f26142f66afca460a0f7aed8a.ctex"]
+source_file="res://assets/Cyberpunk girl/idle.png"
+dest_files=["res://.godot/imported/idle.png-6795bb7efa65cff1f6647b19c7a21f53.ctex"]
 
 [params]
 

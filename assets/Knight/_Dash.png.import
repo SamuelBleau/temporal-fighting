@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cehqmnm2wke8u"
-path="res://.godot/imported/back-buildings.png-78f9b891e9cdfedeb9d1c25fdb0fc074.ctex"
+uid="uid://dw0i8c8jduypm"
+path="res://.godot/imported/_Dash.png-1964652c212f5689e25c51dc23c12f6b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/back-buildings.png"
-dest_files=["res://.godot/imported/back-buildings.png-78f9b891e9cdfedeb9d1c25fdb0fc074.ctex"]
+source_file="res://assets/Knight/_Dash.png"
+dest_files=["res://.godot/imported/_Dash.png-1964652c212f5689e25c51dc23c12f6b.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://nulxnyy5pit5"
-path="res://.godot/imported/foreground.png-30b8717b06cbe97b74a37b5f7e1ea409.ctex"
+uid="uid://xv4dv44qf02p"
+path="res://.godot/imported/far-buildings.png-0e0208331b41b1f4c07d8f9f6878e682.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/foreground.png"
-dest_files=["res://.godot/imported/foreground.png-30b8717b06cbe97b74a37b5f7e1ea409.ctex"]
+source_file="res://assets/Background/far-buildings.png"
+dest_files=["res://.godot/imported/far-buildings.png-0e0208331b41b1f4c07d8f9f6878e682.ctex"]
 
 [params]
 

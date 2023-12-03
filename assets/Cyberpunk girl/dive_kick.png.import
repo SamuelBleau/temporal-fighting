@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cxb4tfbdl83tb"
-path="res://.godot/imported/dive_kick.png-5077edf42b0ab785bdd576685c1d3032.ctex"
+path="res://.godot/imported/dive_kick.png-e22532bce30630b340a83692c25eee8e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/dive_kick.png"
-dest_files=["res://.godot/imported/dive_kick.png-5077edf42b0ab785bdd576685c1d3032.ctex"]
+source_file="res://assets/Cyberpunk girl/dive_kick.png"
+dest_files=["res://.godot/imported/dive_kick.png-e22532bce30630b340a83692c25eee8e.ctex"]
 
 [params]
 
