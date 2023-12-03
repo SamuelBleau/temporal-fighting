@@ -195,7 +195,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_4fbv6")
 }],
-"loop": true,
+"loop": false,
 "name": &"attack",
 "speed": 8.0
 }, {
@@ -218,7 +218,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_45t8u")
 }],
-"loop": true,
+"loop": false,
 "name": &"attack_2",
 "speed": 8.0
 }, {
@@ -330,8 +330,8 @@ animations = [{
 height = 39.4118
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_1ph38"]
-radius = 34.0
-height = 136.0
+radius = 43.0
+height = 168.0
 
 [sub_resource type="Animation" id="Animation_xgha5"]
 length = 0.001
@@ -351,7 +351,6 @@ tracks/0/keys = {
 [sub_resource type="Animation" id="Animation_x0wv6"]
 resource_name = "attack"
 length = 0.4
-loop_mode = 1
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -379,7 +378,6 @@ tracks/1/keys = {
 
 [sub_resource type="Animation" id="Animation_48ywb"]
 resource_name = "attack_2"
-loop_mode = 1
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -595,10 +593,10 @@ position = Vector2(79, 59)
 
 [node name="Sprite2D" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
-position = Vector2(556, 418)
-scale = Vector2(3.4, 3.4)
+position = Vector2(564, 420)
+scale = Vector2(4.25, 4.25)
 sprite_frames = SubResource("SpriteFrames_fo4fu")
-animation = &"idle"
+animation = &"attack_2"
 autoplay = "idle"
 frame = 1
 
@@ -606,12 +604,12 @@ frame = 1
 script = ExtResource("9_0se3o")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite2D/MyHurtbox"]
-position = Vector2(-5.58822, 20.5882)
+position = Vector2(-5.68421, 20.8421)
 shape = SubResource("CapsuleShape2D_72pjg")
 debug_color = Color(0.796078, 0.427451, 0, 0.419608)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(536, 487)
+position = Vector2(540, 508)
 shape = SubResource("CapsuleShape2D_1ph38")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]

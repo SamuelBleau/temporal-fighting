@@ -1,7 +1,7 @@
 extends CharacterBody2D
 
 
-const SPEED = 400.0
+const SPEED = 350.0
 const JUMP_VELOCITY = -900.0
 
 @onready var sprite = $Sprite2D
@@ -11,15 +11,24 @@ const JUMP_VELOCITY = -900.0
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 
 
+
 func _physics_process(delta):
 	# Add the gravity.
 	if not is_on_floor():
 		velocity.y += gravity * delta
 
+	if velocity.y != 0:
+		if Input.is_action_just_pressed("light attack"):
+			anim.play("jump_kick")
+		if Input.is_action_just_pressed("heavy attack"):
+			anim.play("dive_kick")
+
 	# Handle Jump.
 	if Input.is_action_just_pressed("ui_accept") and is_on_floor():
 		velocity.y = JUMP_VELOCITY
-		anim.play("jump")
+		if anim.current_animation != "jump_kick" and anim.current_animation != "dive_kick":
+			anim.play("jump")
+	
 
 	# Get the input direction and handle the movement/deceleration.
 	# As good practice, you should replace UI actions with custom gameplay actions.
@@ -35,6 +44,11 @@ func _physics_process(delta):
 	else:
 		velocity.x = move_toward(velocity.x, 0, 75)
 		if velocity.y == 0:
-			anim.play("Idle")
+			if Input.is_action_just_pressed("light attack"):
+				anim.play("jab")
+			if Input.is_action_just_pressed("heavy attack"):
+				anim.play("kick")
+			if anim.current_animation != "jab" and anim.current_animation != "kick":
+				anim.play("Idle")
 
 	move_and_slide()

@@ -338,8 +338,8 @@ radius = 12.3333
 height = 48.0
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_jdyqa"]
-radius = 37.0
-height = 144.0
+radius = 42.0
+height = 172.0
 
 [sub_resource type="Animation" id="Animation_5dyog"]
 resource_name = "Idle"
@@ -458,7 +458,6 @@ tracks/1/keys = {
 [sub_resource type="Animation" id="Animation_mx7lf"]
 resource_name = "jab"
 length = 0.3
-loop_mode = 1
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -545,7 +544,6 @@ tracks/1/keys = {
 [sub_resource type="Animation" id="Animation_2ux7w"]
 resource_name = "kick"
 length = 0.5
-loop_mode = 1
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -648,11 +646,10 @@ script = ExtResource("1_3gysr")
 [node name="Sprite2D" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
 position = Vector2(523, 538)
-scale = Vector2(3, 3)
+scale = Vector2(3.5, 3.5)
 sprite_frames = SubResource("SpriteFrames_2bhtk")
 animation = &"dive_kick"
 autoplay = "idle"
-frame = 1
 
 [node name="MyHurtbox" type="Area2D" parent="Sprite2D"]
 script = ExtResource("11_bd8ay")
@@ -663,7 +660,7 @@ shape = SubResource("CapsuleShape2D_y4gep")
 debug_color = Color(0.772549, 0.431373, 0.298039, 0.419608)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(518, 562)
+position = Vector2(517, 565)
 shape = SubResource("CapsuleShape2D_jdyqa")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]

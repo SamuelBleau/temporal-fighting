@@ -44,7 +44,7 @@ grow_vertical = 2
 texture = ExtResource("3_nun4e")
 
 [node name="first_character" parent="." instance=ExtResource("4_t3csr")]
-position = Vector2(-273, -13)
+position = Vector2(-271, -29)
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 
@@ -67,5 +67,7 @@ offset_right = 1153.0
 offset_bottom = 647.0
 
 [node name="second_character" parent="." instance=ExtResource("5_nj7hy")]
-position = Vector2(341, 63)
+position = Vector2(339, 30)
 script = ExtResource("6_j00ig")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]

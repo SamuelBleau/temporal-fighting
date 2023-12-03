@@ -1,8 +1,8 @@
 extends CharacterBody2D
 
 
-const SPEED = 300.0
-const JUMP_VELOCITY = -400.0
+const SPEED = 400.0
+const JUMP_VELOCITY = -650.0
 
 @onready var sprite = $Sprite2D
 @onready var anim = get_node("AnimationPlayer")
@@ -31,10 +31,15 @@ func _physics_process(delta):
 	if direction:
 		velocity.x = direction * SPEED
 		if velocity.y == 0:
-			anim.play("walk")
+			anim.play("run")
 	else:
 		velocity.x = move_toward(velocity.x, 0, 75)
 		if velocity.y == 0:
-			anim.play("Idle")
+			if Input.is_action_just_pressed("light attack"):
+				anim.play("attack")
+			if Input.is_action_just_pressed("heavy attack"):
+				anim.play("attack_2")
+			if anim.current_animation != "attack" and anim.current_animation != "attack_2":
+				anim.play("idle")
 
 	move_and_slide()
