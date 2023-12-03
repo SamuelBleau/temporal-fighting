@@ -56,4 +56,23 @@ theme_override_styles/focus = SubResource("StyleBoxEmpty_n7jlk")
 text = "Back to menu"
 flat = true
 
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+layout_mode = 0
+offset_left = 2.0
+offset_top = 243.0
+offset_right = 502.0
+offset_bottom = 293.0
+
+[node name="Label" type="Label" parent="HBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_omil6")
+theme_override_font_sizes/font_size = 50
+text = "Resolution
+"
+
+[node name="OptionButton" type="OptionButton" parent="HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+[connection signal="item_selected" from="HBoxContainer/OptionButton" to="." method="_on_option_button_item_selected"]
