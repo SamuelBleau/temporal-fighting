@@ -1,0 +1,59 @@
+[gd_scene load_steps=6 format=3 uid="uid://no5jsnb5brh8"]
+
+[ext_resource type="Texture2D" uid="uid://hddulpkhieub" path="res://assets/menu_background.jpg" id="1_pooll"]
+[ext_resource type="Script" path="res://init/options.gd" id="1_wit1o"]
+[ext_resource type="FontFile" uid="uid://los6j0hwmf2b" path="res://assets/ARCADE.TTF" id="2_omil6"]
+[ext_resource type="AudioStream" uid="uid://o2fsgocjjyih" path="res://assets/option_music.wav" id="3_5vk85"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_n7jlk"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_wit1o")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 1155.0
+offset_bottom = 651.0
+texture = ExtResource("1_pooll")
+stretch_mode = 1
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_top = -12.0
+offset_right = 1149.0
+offset_bottom = 271.0
+theme_override_fonts/font = ExtResource("2_omil6")
+theme_override_font_sizes/font_size = 100
+text = "Beatin' countdown"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_5vk85")
+autoplay = true
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 0
+offset_left = -1.0
+offset_top = 480.0
+offset_right = 1153.0
+offset_bottom = 577.0
+theme_override_colors/font_pressed_color = Color(0.792157, 0.435294, 0.027451, 1)
+theme_override_colors/font_hover_color = Color(0.937255, 0.52549, 0.0784314, 1)
+theme_override_fonts/font = ExtResource("2_omil6")
+theme_override_font_sizes/font_size = 75
+theme_override_styles/normal = SubResource("StyleBoxEmpty_n7jlk")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_n7jlk")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_n7jlk")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_n7jlk")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_n7jlk")
+text = "Back to menu"
+flat = true
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
