@@ -1,8 +1,8 @@
 [gd_scene load_steps=7 format=3 uid="uid://no5jsnb5brh8"]
 
-[ext_resource type="Texture2D" uid="uid://hddulpkhieub" path="res://assets/menu_background.jpg" id="1_pooll"]
 [ext_resource type="Script" path="res://init/options.gd" id="1_wit1o"]
-[ext_resource type="FontFile" uid="uid://los6j0hwmf2b" path="res://assets/ARCADE.TTF" id="2_omil6"]
+[ext_resource type="Texture2D" uid="uid://dv6ahfxjyew6c" path="res://assets/menu_background.jpg" id="2_tpo6w"]
+[ext_resource type="FontFile" uid="uid://bd67idorsfuqs" path="res://assets/ARCADE.TTF" id="3_3xoce"]
 [ext_resource type="AudioStream" uid="uid://o2fsgocjjyih" path="res://assets/option_music.wav" id="3_5vk85"]
 [ext_resource type="Script" path="res://init/MusicSlider.gd" id="5_r4jc4"]
 
@@ -21,7 +21,7 @@ script = ExtResource("1_wit1o")
 layout_mode = 0
 offset_right = 1155.0
 offset_bottom = 651.0
-texture = ExtResource("1_pooll")
+texture = ExtResource("2_tpo6w")
 stretch_mode = 1
 
 [node name="Label" type="Label" parent="."]
@@ -29,7 +29,7 @@ layout_mode = 0
 offset_top = -12.0
 offset_right = 1149.0
 offset_bottom = 271.0
-theme_override_fonts/font = ExtResource("2_omil6")
+theme_override_fonts/font = ExtResource("3_3xoce")
 theme_override_font_sizes/font_size = 100
 text = "Beatin' countdown"
 horizontal_alignment = 1
@@ -48,7 +48,7 @@ offset_right = 1153.0
 offset_bottom = 577.0
 theme_override_colors/font_pressed_color = Color(0.792157, 0.435294, 0.027451, 1)
 theme_override_colors/font_hover_color = Color(0.937255, 0.52549, 0.0784314, 1)
-theme_override_fonts/font = ExtResource("2_omil6")
+theme_override_fonts/font = ExtResource("3_3xoce")
 theme_override_font_sizes/font_size = 75
 theme_override_styles/normal = SubResource("StyleBoxEmpty_n7jlk")
 theme_override_styles/hover = SubResource("StyleBoxEmpty_n7jlk")
@@ -67,7 +67,7 @@ offset_bottom = 304.0
 
 [node name="Label" type="Label" parent="HBoxContainer"]
 layout_mode = 2
-theme_override_fonts/font = ExtResource("2_omil6")
+theme_override_fonts/font = ExtResource("3_3xoce")
 theme_override_font_sizes/font_size = 50
 text = "Resolution
 "
@@ -82,7 +82,7 @@ offset_left = 364.0
 offset_top = 340.0
 offset_right = 477.0
 offset_bottom = 390.0
-theme_override_fonts/font = ExtResource("2_omil6")
+theme_override_fonts/font = ExtResource("3_3xoce")
 theme_override_font_sizes/font_size = 50
 text = "Music"
 
@@ -103,11 +103,12 @@ offset_left = 364.0
 offset_top = 410.0
 offset_right = 442.0
 offset_bottom = 460.0
-theme_override_fonts/font = ExtResource("2_omil6")
+theme_override_fonts/font = ExtResource("3_3xoce")
 theme_override_font_sizes/font_size = 50
 text = "SFX"
 
 [node name="SfxSlider" type="HSlider" parent="."]
+layout_mode = 0
 offset_left = 500.0
 offset_top = 422.0
 offset_right = 850.0

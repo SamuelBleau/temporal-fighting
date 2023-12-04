@@ -28,7 +28,8 @@ func AddResolution():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	pass
+	if Input.is_action_just_released("quit"):
+		get_tree().change_scene_to_file("res://init/menu.tscn")
 
 func _on_button_pressed():
 	get_tree().change_scene_to_file("res://init/menu.tscn") # Replace with function body.
