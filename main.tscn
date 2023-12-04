@@ -5,7 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://cehqmnm2wke8u" path="res://assets/Background/back-buildings.png" id="2_papm1"]
 [ext_resource type="Texture2D" uid="uid://nulxnyy5pit5" path="res://assets/Background/foreground.png" id="3_nun4e"]
 [ext_resource type="PackedScene" uid="uid://d4l7wwxq5i0m6" path="res://scenes/first_character.tscn" id="4_t3csr"]
-[ext_resource type="FontFile" uid="uid://bd67idorsfuqs" path="res://assets/ARCADE.TTF" id="5_lcv6h"]
+[ext_resource type="FontFile" uid="uid://los6j0hwmf2b" path="res://assets/ARCADE.TTF" id="5_lcv6h"]
 [ext_resource type="PackedScene" uid="uid://cinofkx4oakjh" path="res://scenes/second_character.tscn" id="5_nj7hy"]
 [ext_resource type="Script" path="res://scenes/second_character.gd" id="6_j00ig"]
 [ext_resource type="AudioStream" uid="uid://c5mwhuqk0wijy" path="res://assets/game_music.ogg" id="7_aasv1"]
