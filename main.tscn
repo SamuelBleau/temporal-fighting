@@ -57,13 +57,15 @@ theme_override_font_sizes/font_size = 50
 text = "Player 1"
 
 [node name="timer" type="Label" parent="."]
-offset_left = 553.0
-offset_top = 1.0
-offset_right = 595.0
-offset_bottom = 60.0
+offset_left = 550.0
+offset_top = 11.0
+offset_right = 592.0
+offset_bottom = 70.0
 theme_override_fonts/font = ExtResource("5_lcv6h")
 theme_override_font_sizes/font_size = 50
-text = "∞"
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 99.9
 
 [node name="hpj1" type="ProgressBar" parent="."]
 self_modulate = Color(0.972549, 0.0235294, 0, 1)
@@ -125,3 +127,5 @@ script = ExtResource("6_j00ig")
 stream = ExtResource("7_aasv1")
 autoplay = true
 bus = &"music"
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
