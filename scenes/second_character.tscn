@@ -464,7 +464,6 @@ tracks/1/keys = {
 [sub_resource type="Animation" id="Animation_8ypv1"]
 resource_name = "hit"
 length = 0.1
-loop_mode = 1
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -596,9 +595,8 @@ texture_filter = 1
 position = Vector2(564, 420)
 scale = Vector2(4.25, 4.25)
 sprite_frames = SubResource("SpriteFrames_fo4fu")
-animation = &"attack_2"
+animation = &"hurt"
 autoplay = "idle"
-frame = 1
 
 [node name="MyHurtbox" type="Area2D" parent="Sprite2D"]
 script = ExtResource("9_0se3o")

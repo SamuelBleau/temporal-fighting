@@ -1,4 +1,4 @@
-[gd_scene load_steps=65 format=3 uid="uid://d4l7wwxq5i0m6"]
+[gd_scene load_steps=68 format=3 uid="uid://d4l7wwxq5i0m6"]
 
 [ext_resource type="Script" path="res://scenes/first_character.gd" id="1_3gysr"]
 [ext_resource type="Texture2D" uid="uid://cxb4tfbdl83tb" path="res://assets/Cyberpunk girl/dive_kick.png" id="2_hltmq"]
@@ -11,6 +11,7 @@
 [ext_resource type="Texture2D" uid="uid://b8ixcndkm5d2v" path="res://assets/Cyberpunk girl/punch.png" id="9_fftuo"]
 [ext_resource type="Texture2D" uid="uid://cqgsqcp86sb1g" path="res://assets/Cyberpunk girl/walk.png" id="10_3m26q"]
 [ext_resource type="Script" path="res://practice/MyHurtbox.gd" id="11_bd8ay"]
+[ext_resource type="Script" path="res://practice/MyHitbox.gd" id="12_vyuc7"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_niusf"]
 atlas = ExtResource("2_hltmq")
@@ -337,6 +338,14 @@ animations = [{
 radius = 12.3333
 height = 48.0
 
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_th4j0"]
+radius = 4.57143
+height = 42.5906
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_nv22l"]
+radius = 9.56595
+height = 36.9322
+
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_jdyqa"]
 radius = 42.0
 height = 172.0
@@ -369,6 +378,18 @@ tracks/1/keys = {
 "update": 1,
 "values": [0, 1, 2, 3]
 }
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Sprite2D/HitboxDiveKick/DiveKickShape:disabled")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
 
 [sub_resource type="Animation" id="Animation_u4ggs"]
 length = 0.001
@@ -379,10 +400,10 @@ tracks/0/path = NodePath("Sprite2D:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
+"times": PackedFloat32Array(),
+"transitions": PackedFloat32Array(),
 "update": 1,
-"values": [1]
+"values": []
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -395,6 +416,30 @@ tracks/1/keys = {
 "transitions": PackedFloat32Array(1),
 "update": 1,
 "values": [&"dive_kick"]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Sprite2D/HitboxDiveKick/DiveKickShape:disabled")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Sprite2D/HitboxJumpKick/JumpKickShape:disabled")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
 }
 
 [sub_resource type="Animation" id="Animation_8dmjt"]
@@ -425,6 +470,18 @@ tracks/1/keys = {
 "update": 1,
 "values": [0, 1, 2, 3, 4]
 }
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Sprite2D/HitboxDiveKick/DiveKickShape:disabled")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.3, 0.5),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [true, false, true]
+}
 
 [sub_resource type="Animation" id="Animation_ff373"]
 resource_name = "hurt"
@@ -454,6 +511,18 @@ tracks/1/keys = {
 "update": 1,
 "values": [0, 1]
 }
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Sprite2D/HitboxDiveKick/DiveKickShape:disabled")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
 
 [sub_resource type="Animation" id="Animation_mx7lf"]
 resource_name = "jab"
@@ -481,6 +550,18 @@ tracks/1/keys = {
 "transitions": PackedFloat32Array(1, 1, 1),
 "update": 1,
 "values": [0, 1, 2]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Sprite2D/HitboxDiveKick/DiveKickShape:disabled")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
 }
 
 [sub_resource type="Animation" id="Animation_ytxub"]
@@ -511,11 +592,22 @@ tracks/1/keys = {
 "update": 1,
 "values": [0, 1, 2, 3]
 }
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Sprite2D/HitboxDiveKick/DiveKickShape:disabled")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
 
 [sub_resource type="Animation" id="Animation_1ag1u"]
 resource_name = "jump_kick"
 length = 0.3
-loop_mode = 1
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -539,6 +631,30 @@ tracks/1/keys = {
 "transitions": PackedFloat32Array(1, 1, 1),
 "update": 1,
 "values": [0, 1, 2]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Sprite2D/HitboxJumpKick/JumpKickShape:disabled")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.3),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [true, false, true]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Sprite2D/HitboxDiveKick/DiveKickShape:disabled")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
 }
 
 [sub_resource type="Animation" id="Animation_2ux7w"]
@@ -567,6 +683,18 @@ tracks/1/keys = {
 "transitions": PackedFloat32Array(1, 1, 1, 1, 1),
 "update": 1,
 "values": [0, 1, 2, 3, 4]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Sprite2D/HitboxDiveKick/DiveKickShape:disabled")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
 }
 
 [sub_resource type="Animation" id="Animation_5kupb"]
@@ -597,6 +725,18 @@ tracks/1/keys = {
 "update": 1,
 "values": [0, 1, 2]
 }
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Sprite2D/HitboxDiveKick/DiveKickShape:disabled")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
 
 [sub_resource type="Animation" id="Animation_vfmqn"]
 resource_name = "walk"
@@ -625,6 +765,18 @@ tracks/1/keys = {
 "update": 1,
 "values": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
 }
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Sprite2D/HitboxDiveKick/DiveKickShape:disabled")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_cc1y3"]
 _data = {
@@ -650,7 +802,6 @@ scale = Vector2(3.5, 3.5)
 sprite_frames = SubResource("SpriteFrames_2bhtk")
 animation = &"dive_kick"
 autoplay = "idle"
-frame = 1
 
 [node name="MyHurtbox" type="Area2D" parent="Sprite2D"]
 script = ExtResource("11_bd8ay")
@@ -660,8 +811,30 @@ position = Vector2(-1.66667, 8)
 shape = SubResource("CapsuleShape2D_y4gep")
 debug_color = Color(0.772549, 0.431373, 0.298039, 0.419608)
 
+[node name="HitboxDiveKick" type="Area2D" parent="Sprite2D"]
+collision_layer = 2
+collision_mask = 0
+script = ExtResource("12_vyuc7")
+
+[node name="DiveKickShape" type="CollisionShape2D" parent="Sprite2D/HitboxDiveKick"]
+position = Vector2(20.2857, 14.2857)
+rotation = 4.97418
+shape = SubResource("CapsuleShape2D_th4j0")
+disabled = true
+debug_color = Color(0.541176, 0.0862745, 0.686275, 0.419608)
+
+[node name="HitboxJumpKick" type="Area2D" parent="Sprite2D"]
+script = ExtResource("12_vyuc7")
+
+[node name="JumpKickShape" type="CollisionShape2D" parent="Sprite2D/HitboxJumpKick"]
+position = Vector2(7.71426, -4.57143)
+rotation = 3.66519
+shape = SubResource("CapsuleShape2D_nv22l")
+disabled = true
+debug_color = Color(0.682353, 0.360784, 0.478431, 0.419608)
+
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(517, 565)
+position = Vector2(517, 564)
 shape = SubResource("CapsuleShape2D_jdyqa")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
