@@ -10,6 +10,9 @@ const JUMP_VELOCITY = -650.0
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 
+func take_damage(amount: int) -> void:
+	anim.play("hit")
+	print("damage: ", amount)
 
 func _physics_process(delta):
 	# Add the gravity.
@@ -39,7 +42,7 @@ func _physics_process(delta):
 				anim.play("attack")
 			if Input.is_action_just_pressed("attack2"):
 				anim.play("attack_2")
-			if anim.current_animation != "attack" and anim.current_animation != "attack_2":
+			if anim.current_animation != "attack" and anim.current_animation != "attack_2" and anim.current_animation == "hit":
 				anim.play("idle")
 
 	move_and_slide()
