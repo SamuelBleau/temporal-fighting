@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://e07ugfjne3la"]
+[gd_scene load_steps=11 format=3 uid="uid://e07ugfjne3la"]
 
 [ext_resource type="Script" path="res://init/menu.gd" id="1_dgehd"]
 [ext_resource type="Texture2D" uid="uid://dv6ahfxjyew6c" path="res://assets/menu_background.jpg" id="3_ik0qt"]
@@ -10,6 +10,8 @@
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ffnj5"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_o0i00"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_aqdjn"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_t2aa3"]
 
@@ -37,6 +39,7 @@ offset_left = 5.0
 offset_top = 70.0
 offset_right = 1154.0
 offset_bottom = 353.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_fonts/font = ExtResource("4_kvrxk")
 theme_override_font_sizes/font_size = 100
 text = "Beatin' countdown"
@@ -69,20 +72,23 @@ theme_type_variation = &"FlatButton"
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_colors/font_pressed_color = Color(0.792157, 0.435294, 0.027451, 1)
 theme_override_colors/font_hover_color = Color(0.937255, 0.52549, 0.0784314, 1)
+theme_override_colors/font_focus_color = Color(0.937255, 0.52549, 0.0784314, 1)
 theme_override_fonts/font = ExtResource("4_kvrxk")
 theme_override_font_sizes/font_size = 75
 theme_override_styles/normal = SubResource("StyleBoxEmpty_hts7a")
 theme_override_styles/hover = SubResource("StyleBoxEmpty_ffnj5")
 theme_override_styles/pressed = SubResource("StyleBoxEmpty_o0i00")
 theme_override_styles/disabled = SubResource("StyleBoxEmpty_o0i00")
-theme_override_styles/focus = SubResource("StyleBoxEmpty_o0i00")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_aqdjn")
 text = "Start"
 
 [node name="OptionsButton" type="Button" parent="VBoxContainer"]
 layout_mode = 2
 theme_type_variation = &"FlatButton"
+theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_colors/font_pressed_color = Color(0.792157, 0.435294, 0.027451, 1)
 theme_override_colors/font_hover_color = Color(0.937255, 0.52549, 0.0784314, 1)
+theme_override_colors/font_focus_color = Color(0.937255, 0.52549, 0.0784314, 1)
 theme_override_fonts/font = ExtResource("4_kvrxk")
 theme_override_font_sizes/font_size = 75
 theme_override_styles/normal = SubResource("StyleBoxEmpty_t2aa3")
@@ -96,8 +102,10 @@ text = "Options"
 layout_mode = 2
 focus_neighbor_bottom = NodePath("../StartButton")
 theme_type_variation = &"FlatButton"
+theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_colors/font_pressed_color = Color(0.792157, 0.435294, 0.027451, 1)
 theme_override_colors/font_hover_color = Color(0.937255, 0.52549, 0.0784314, 1)
+theme_override_colors/font_focus_color = Color(0.937255, 0.52549, 0.0784314, 1)
 theme_override_fonts/font = ExtResource("4_kvrxk")
 theme_override_font_sizes/font_size = 75
 theme_override_styles/normal = SubResource("StyleBoxEmpty_80vv5")
