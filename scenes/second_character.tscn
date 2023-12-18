@@ -327,11 +327,11 @@ animations = [{
 }]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_72pjg"]
-height = 39.4118
+height = 37.6471
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_1ph38"]
 radius = 43.0
-height = 168.0
+height = 160.0
 
 [sub_resource type="Animation" id="Animation_xgha5"]
 length = 0.001
@@ -595,19 +595,20 @@ texture_filter = 1
 position = Vector2(564, 420)
 scale = Vector2(4.25, 4.25)
 sprite_frames = SubResource("SpriteFrames_fo4fu")
-animation = &"hurt"
+animation = &"idle"
 autoplay = "idle"
+frame = 1
 
 [node name="MyHurtbox" type="Area2D" parent="Sprite2D"]
 script = ExtResource("9_0se3o")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite2D/MyHurtbox"]
-position = Vector2(-5.68421, 20.8421)
+position = Vector2(-4.94118, 21.4118)
 shape = SubResource("CapsuleShape2D_72pjg")
 debug_color = Color(0.796078, 0.427451, 0, 0.419608)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(540, 508)
+position = Vector2(543, 511)
 shape = SubResource("CapsuleShape2D_1ph38")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
