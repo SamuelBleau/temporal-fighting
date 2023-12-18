@@ -749,6 +749,7 @@ scale = Vector2(3.5, 3.5)
 sprite_frames = SubResource("SpriteFrames_2bhtk")
 animation = &"dive_kick"
 autoplay = "idle"
+frame = 4
 
 [node name="MyHurtbox" type="Area2D" parent="Sprite2D"]
 script = ExtResource("11_bd8ay")

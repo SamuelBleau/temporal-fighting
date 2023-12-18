@@ -48,7 +48,7 @@ func _physics_process(delta):
 				anim.play("jab")
 			if Input.is_action_just_pressed("kick"):
 				anim.play("kick")
-			if anim.current_animation != "jab" and anim.current_animation != "kick" and anim.current_animation != "dive_kick" and anim.current_animation != "jump_kick":
+			if anim.current_animation != "jab" and anim.current_animation != "kick":
 				anim.play("Idle")
 
 	move_and_slide()
