@@ -16,7 +16,7 @@ func _input(event):
 		$VBoxContainer/OptionsButton.release_focus()
 		$VBoxContainer/QuitButton.release_focus()
 		choice = 1
-	if event.is_action_released("key") and $VBoxContainer/StartButton.has_focus() == false and $VBoxContainer/OptionsButton.has_focus() == false and $VBoxContainer/QuitButton.has_focus() == false:
+	if event.is_action_pressed("key") and $VBoxContainer/StartButton.has_focus() == false and $VBoxContainer/OptionsButton.has_focus() == false and $VBoxContainer/QuitButton.has_focus() == false:
 		$VBoxContainer/StartButton.grab_focus()
 		choice = 0
 

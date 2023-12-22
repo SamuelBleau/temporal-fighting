@@ -10,9 +10,10 @@ var Resolutions: Dictionary = { "1920x1080":Vector2(1920, 1080),
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	AddResolution()
-	$VBoxContainer.grab_focus()
+	$VBoxContainer/Button.add_theme_color_override("font_color", Color("ef8614"))
 
 @onready var Resoptionbutton = $HBoxContainer/OptionButton
+@onready var cpt_button = 0
 
 func AddResolution():
 	var CurrentResolution = DisplayServer.window_get_size()
@@ -31,6 +32,40 @@ func AddResolution():
 func _process(delta):
 	if Input.is_action_just_pressed("quit"):
 		get_tree().change_scene_to_file("res://init/menu.tscn")
+
+func _input(event):
+	if cpt_button == 0:
+		$VBoxContainer/Button.add_theme_color_override("font_color", Color("ef8614"))
+		if event.is_action_pressed("enter"):
+			get_tree().change_scene_to_file("res://init/menu.tscn")
+		if event.is_action_pressed("key_up"):
+			cpt_button = 1
+			$VBoxContainer/Button.add_theme_color_override("font_color", Color("ffffff"))
+			return
+		if event.is_action_pressed("key_down"):
+			cpt_button = 2
+			$VBoxContainer/Button.add_theme_color_override("font_color", Color("ffffff"))
+			return
+	if cpt_button == 1:
+		$VBoxContainer/SfxText.add_theme_color_override("font_color", Color("ef8614"))
+		if event.is_action_pressed("key_up"):
+			cpt_button = 2
+			$VBoxContainer/SfxText.add_theme_color_override("font_color", Color("ffffff"))
+			return
+		if event.is_action_pressed("key_down"):
+			cpt_button = 0
+			$VBoxContainer/SfxText.add_theme_color_override("font_color", Color("ffffff"))
+			return
+	if cpt_button == 2:
+		$VBoxContainer/MusicText.add_theme_color_override("font_color", "ef8614")
+		if event.is_action_pressed("key_up"):
+			cpt_button = 0
+			$VBoxContainer/MusicText.add_theme_color_override("font_color", "ffffff")
+			return
+		if event.is_action_pressed("key_down"):
+			cpt_button = 1
+			$VBoxContainer/MusicText.add_theme_color_override("font_color", "ffffff")
+			return
 
 func _on_button_pressed():
 	get_tree().change_scene_to_file("res://init/menu.tscn") # Replace with function body.

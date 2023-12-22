@@ -109,6 +109,7 @@ layout_mode = 2
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_colors/font_pressed_color = Color(0.792157, 0.435294, 0.027451, 1)
 theme_override_colors/font_hover_color = Color(0.937255, 0.52549, 0.0784314, 1)
+theme_override_colors/font_focus_color = Color(0.937255, 0.52549, 0.0784314, 1)
 theme_override_fonts/font = ExtResource("3_3xoce")
 theme_override_font_sizes/font_size = 75
 theme_override_styles/normal = SubResource("StyleBoxEmpty_n7jlk")
