@@ -9,7 +9,8 @@ var Resolutions: Dictionary = { "1920x1080":Vector2(1920, 1080),
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	AddResolution() # Replace with function body.
+	AddResolution()
+	$VBoxContainer.grab_focus()
 
 @onready var Resoptionbutton = $HBoxContainer/OptionButton
 
@@ -28,7 +29,7 @@ func AddResolution():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	if Input.is_action_just_released("quit"):
+	if Input.is_action_just_pressed("quit"):
 		get_tree().change_scene_to_file("res://init/menu.tscn")
 
 func _on_button_pressed():

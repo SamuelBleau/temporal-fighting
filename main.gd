@@ -7,13 +7,12 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	if Input.is_action_just_released("quit"):
+	if Input.is_action_just_pressed("quit"):
 		get_tree().change_scene_to_file("res://init/menu.tscn")
 	if ($Timer.time_left < 10):
 		$timer.text = "0" + str(int($Timer.time_left))
 	if ($Timer.time_left > 10):
 		$timer.text = str(int($Timer.time_left))
-
 
 func _on_timer_timeout():
 	$Timer.stop()
